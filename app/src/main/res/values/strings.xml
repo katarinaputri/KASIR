@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KASIR</string>
+    <string name="uname">Username</string>
+    <string name="pass">Password</string>
+    <string name="lupapass">Lupa Password</string>
+    <string name="login">Login</string>
+    <string name="newpass">Password Baru</string>
+    <string name="conpass">Ulang Password Baru</string>
+</resources>

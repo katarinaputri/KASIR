@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".DetailMenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/coklat"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETAIL MENU"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/judul_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="ID Menu"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/id_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="ID"
+        android:textColor="@color/coklat"
+        android:textSize="9pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/judul_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_menu"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Nama Menu"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nama_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_menu"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="MENU"
+        android:textColor="@color/coklat"
+        android:textSize="9pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/judul_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama_menu"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Harga Menu"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/harga_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_harga"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="HARGA"
+        android:textColor="@color/coklat"
+        android:textSize="9pt"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnkembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/harga_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="start"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/warna_button"
+        android:text="Kembali"
+        android:textColor="@color/tulisan_button"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

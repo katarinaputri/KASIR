@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".KasirActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/coklat"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KASIR"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/judul_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="10dp"
+        android:text="ID Pesanan : "
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/id_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/judul_namapembeli"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/judul_namapembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_pesanan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:text="Nama Pembeli : "
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nama_pembeli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_pesanan"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/judul_namapembeli"
+        android:backgroundTint="@color/coklat"
+        android:inputType="text"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/harga"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama_pembeli"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="HARGA"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama_pembeli"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="QTY"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama_pembeli"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="TOTAL"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menu1"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/harga"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qty1"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total1"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/qty1"
+        android:layout_alignBottom="@+id/qty1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/coklat"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="13pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menu2"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu1"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qty2"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total2"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/qty2"
+        android:layout_alignBottom="@+id/qty2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/coklat"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="13pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menu3"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu2"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qty3"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total3"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/qty3"
+        android:layout_alignBottom="@+id/qty3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/coklat"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="13pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menu4"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu3"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qty4"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total4"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/qty4"
+        android:layout_alignBottom="@+id/qty4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/coklat"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="13pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menu5"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu4"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qty5"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total5"
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/qty5"
+        android:layout_alignBottom="@+id/qty5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/coklat"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/coklat"
+        android:textSize="13pt"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/totallyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qty5"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/warna_button"
+            android:text="TOTAL PEMBELIAN"
+            android:textColor="@color/coklat"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/total"
+            android:background="@color/warna_button"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/coklat"
+            android:textSize="13pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/judul_pembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totallyt"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Pembayaran : "
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/total_pembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totallyt"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/judul_pembayaran"
+        android:backgroundTint="@color/coklat"
+        android:inputType="number"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/kembalian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_pembayaran"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/judul_kembalian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/warna_button"
+            android:text="TOTAL KEMBALIAN"
+            android:textColor="@color/coklat"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/judul_kembalian"
+            android:background="@color/warna_button"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/coklat"
+            android:textSize="13pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kembalian"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="@color/warna_button"
+            android:text="RESET"
+            android:textColor="@color/tulisan_button"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnsimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@id/btnreset"
+            android:backgroundTint="@color/warna_button"
+            android:text="simpan"
+            android:textColor="@color/tulisan_button"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

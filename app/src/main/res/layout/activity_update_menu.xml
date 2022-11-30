@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".UpdateMenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/coklat"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE MENU"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/judul_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="ID Menu"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="ID"
+        android:textColor="@color/coklat"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/judul_menubaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Nama Menu Baru"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/menuupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_menubaru"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="text"
+        android:textColor="@color/coklat" />
+
+    <TextView
+        android:id="@+id/judul_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuupdate"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Harga Menu Baru"
+        android:textColor="@color/coklat"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/hargaupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_harga"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/coklat"
+        android:inputType="text"
+        android:textColor="@color/coklat"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hargaupdate"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/warna_button"
+            android:text="Kembali"
+            android:textColor="@color/tulisan_button"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnsimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/btnkembali"
+            android:backgroundTint="@color/warna_button"
+            android:text="simpan"
+            android:textColor="@color/tulisan_button"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

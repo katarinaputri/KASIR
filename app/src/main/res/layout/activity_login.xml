@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/bg"
+    tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg"
+        app:popupTheme="@style/Widget.AppCompat.Light.PopupMenu.Overflow" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:text="@string/login"
+        android:textSize="17pt"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/sik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3pt">
+
+        <TextView
+            android:id="@+id/SI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sistem Informasi "
+            android:textColor="@color/white"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Kasir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/SI"
+            android:layout_centerHorizontal="true"
+            android:text="Kasir"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/judul_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/username"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/uname"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/judul_pass"
+        android:layout_marginHorizontal="60dp"
+        android:hint="@string/uname"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/judul_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pass"
+        android:textSize="8pt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/pass"
+        android:imeActionLabel="@string/pass"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:layout_below="@id/judul_pass"/>
+
+    <TextView
+        android:id="@+id/lupa_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:text="@string/lupapass"
+        android:textSize="5pt"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lupa_pass"
+        android:layout_centerInParent="true"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/warna_button"
+        android:text="@string/login"
+        android:textColor="@color/tulisan_button"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

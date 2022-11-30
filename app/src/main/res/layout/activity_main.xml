@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/coklat"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:text="logout"
+        android:layout_below="@id/toolbar2"
+        android:backgroundTint="@color/coklat"
+        android:layout_alignParentEnd="true"/>
+
+
+    <TextView
+        android:id="@+id/tvmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/menu"
+        android:layout_marginLeft="47dp"
+        android:text="DAFTAR MENU"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:textColor="@color/coklat"/>
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="60pt"
+        android:layout_height="100dp"
+        android:layout_above="@id/jeda"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/coklat"
+        android:drawableTop="@drawable/menu"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/menu"
+        android:layout_marginLeft="99dp"
+        android:text="KASIR"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/tvmenu"
+        android:textColor="@color/coklat"/>
+
+    <Button
+        android:id="@+id/kasir"
+        android:layout_width="60pt"
+        android:layout_height="100dp"
+        android:layout_above="@id/jeda"
+        android:layout_toEndOf="@id/menu"
+        android:backgroundTint="@color/coklat"
+        android:drawableTop="@drawable/kasir"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:id="@+id/jeda"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/laporan"
+        android:layout_width="60pt"
+        android:layout_height="100dp"
+        android:layout_below="@id/jeda"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/coklat"
+        android:drawableTop="@drawable/struk"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/laporan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:text="LAPORAN"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:textColor="@color/coklat"/>
+
+</RelativeLayout>
